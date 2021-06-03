@@ -109,7 +109,6 @@ WARNING
         post_bundler
         create_database_yml
         install_binaries
-        run_assets_precompile_rake_task
       end
       config_detect
       best_practice_warnings
@@ -1004,7 +1003,7 @@ params = CGI.parse(uri.query || "")
 
       topic "Detecting rake tasks"
       rake = LanguagePack::Helpers::RakeRunner.new(rake_gem_available)
-      rake.load_rake_tasks!({ env: rake_env }, raise_on_fail)
+      rake.load_rake_tasks!({ env: rake_env }, false)
       rake
     end
   end

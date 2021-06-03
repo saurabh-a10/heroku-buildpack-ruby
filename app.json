@@ -19,7 +19,7 @@
         }
       },
       "scripts": {
-        "test-setup": "bundle exec rake hatchet:setup_ci",
+        "test-setup": "",
         "test":       "bundle exec rspec-queue --max-requeues=3 --timeout 180 --queue $REDIS_URL --exclude-pattern 'cnb/**/*' || { cat log/test_order.log;  $(exit 1); }"
       },
       "buildpacks": [

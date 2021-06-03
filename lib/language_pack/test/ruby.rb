@@ -30,7 +30,7 @@ class LanguagePack::Ruby
 
   private
   def db_prepare_test_rake_tasks
-    ["db:schema:load", "db:migrate"].map {|name| rake.task(name) }
+    ["app:db:schema:load", "app:db:migrate"].map {|name| rake.task(name) }
   end
 
   def prepare_tests
